@@ -5,7 +5,7 @@ The IoT Sample Browser App extended to run IoT Device Portal locally on a Window
 Is the Sample IOT Web Browser from GitHub modified to add Back, Forwards and Home Navigation.
 
 
-Main feature though is supports running the Device Management Portal locally on the Windows 10 IoT-Core device.
+Main feature though is it supports running the Device Management Portal locally on the Windows 10 IoT-Core device.
 Openning page is login page defaulting to default IoT-Core credentials. Once logged in you are on the Device Portal Home page.
 Enjoy! :)
 
