@@ -1,0 +1,277 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        #commonContent {
+            color: black;
+        }
+        #webbHeaderLogo {
+            position: fixed;
+            z-index: 5;
+            width: 192px;
+            height: 48px;
+            top: 0px;
+            left: 0px;
+            background: #050505;
+        }
+        #webbHeaderLogo img {
+            display: block;
+            height: 22px;
+            margin: 12px auto;
+        }
+        #webbNavigationBar {
+            position: fixed;
+            z-index: 5;
+            width: 192px;
+            top: 48px;
+            left: 0px;
+            background: #050505;
+            height: calc(100% - 48px);
+            overflow-y: auto;
+        }
+        #webbNavigationBar p {
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: small;
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+        #webbNavigationBar ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 0;
+        }
+        #webbNavigationBar .highlight {
+            color: black;
+            background: linear-gradient(90deg, #32bdfe, #65daf4);
+        }
+        #webbNavigationBar a {
+            text-decoration: none;
+            color: #018bcb;
+            text-transform: none;
+            display: block;
+            text-align: center;
+            padding-bottom: 3px;
+        }
+        #webbTitleBar {
+            position: fixed;
+            z-index: 5;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            height: 48px;
+            background: #d5d5d5;
+            z-index: -1;
+        }
+        #webbTitleBar p {
+            font-size: x-large;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            position: absolute;
+            left: 228px;
+            top: -15px;
+            width: 403px;
+        }
+        #webbIconsBar {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            z-index: 6;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        #webbIconsBar button {
+            border-left: solid 1px white;
+            height: 48px;
+            color: black;
+            padding: 0px 6px;
+            vertical-align: top;
+            width: 82px;
+            margin: 0px 0px 4px 0px;
+        }
+        .textButton {
+            background: rgba(0, 0, 0, 0.00);
+            border: rgba(0, 0, 0, 0.00);
+            color: white;
+            margin: 5px;
+        }
+        #webbIconsBar button span.topButtonIcon {
+            font-size: large;
+        }
+        .symbol {
+            font-family: WebManagementSymbols;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 180px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        #content {
+            position: fixed;
+            top: 48px;
+            width: calc(100% - 222px);
+            height: calc(100% - 80px);
+            left: 190px;
+            padding-top: 16px;
+            padding-left: 32px;
+            overflow: auto;
+            z-index: 5;
+        }
+        .sectionHeader {
+            font-size: large;
+            font-weight: bold;
+        }
+        .indentSection,
+        .statusPage #CalibrationActions,
+        .statusPage p {
+            margin-left: 20px;
+        }
+        hr {
+            margin-right: 32px;
+            margin-top: 24px;
+            border: 0;
+            height: 0;
+            border-top: 1px solid #eeeeee;
+        }
+        .wideInputField {
+            width: 512px;
+        }
+        .inputField,
+        .wideInputField {
+            padding: 0px 4px;
+            margin: 5px;
+            height: 28px;
+            vertical-align: middle;
+        }
+        .commonButton {
+            width: 128px;
+            height: 32px;
+            background: #d5d5d5;
+            border: 0px;
+            margin: 5px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+        #username {
+            width: 257px;
+        }
+        #pwd {
+            width: 399px;
+        }
+        #usr {
+            width: 393px;
+        }
+    </style>
+    <title>Device Manager Login</title>
+</head>
+
+<body>
+    <div id="commonContent">
+        <div id="webbHeaderLogo">
+            <img src="http://localhost:8080/img/logo.png" />
+        </div>
+        <div id="webbNavigationBar">
+            <p>
+                utilities /</p>
+            <ul>
+                <li><a>Home</a>
+                </li>
+                <li><a>Apps</a>
+                </li>
+                <li><a>App File Explorer</a>
+                </li>
+                <li><a>Processes</a>
+                </li>
+                <li><a>Performance</a>
+                </li>
+                <li><a>Debugging</a>
+                </li>
+                <li><a>ETW</a>
+                </li>
+                <li><a>Perf Tracing</a>
+                </li>
+                <li><a>Devices</a>
+                </li>
+                <li><a>Bluetooth</a>
+                </li>
+                <li><a>Audio</a>
+                </li>
+                <li><a>Networking</a>
+                </li>
+                <li><a>Windows Update</a>
+                </li>
+                <li><a>IoT Onboarding</a>
+                </li>
+                <li><a>TPM configuration</a>
+                </li>
+                <li><a>Remote</a>
+                </li>
+            </ul>
+        </div>
+        <div id="webbTitleBar" style=>
+            <p id="pageName" >
+                IoT Device Manager</p>
+        </div>
+        <div id="webbIconsBar">
+            <table class="button" style="float: right; font-size: small; border-left: solid 1px white; padding-left: 4px; padding-right: 4px; width: 100px; background: #eeeeee; text-align: center;">
+                <tr>
+                    <td id="labelTime">‎7‎:‎47‎ ‎AM</td>
+                </tr>
+                <tr>
+                    <td id="labelDate">‎15‎/‎06‎/‎2016</td>
+                </tr>
+            </table>
+            <div class="dropdown">
+                <button id="power" class="textButton">
+                    <span class="topButtonIcon symbol"></span>
+                    <br />
+                    <span>Power</span>
+                </button>
+                <div id="powerMenu" class="dropdown-content" style="display: none;">
+                    <a id="shutdownoption" >Shut down</a><a id="restartoption" >Restart</a>
+                </div>
+            </div>
+            <button id="feedback" class="textButton">
+                <span class="topButtonIcon symbol"></span>
+                <br />
+                <span>Feedback</span>
+            </button>
+            <button id="webbHelp" class="textButton">
+                <span class="topButtonIcon symbol"></span>
+                <br />
+                <span>Help</span>
+            </button>
+        </div>
+    </div>
+    <div id="content">
+        <p class="sectionHeader">
+            <span class="symbol">Login</span>
+        </p>
+ 
+        <div>
+            <form onsubmit="default.htm">
+                <table>
+                    <tr><td>Username:  </td><td><input type="text" name="usr" id="usr" value="administrator"></td></tr>
+                    <tr><td>Password:  </td><td>  <input type="password" name="pwd" id="pwd" value="p@ssw0rd"></td></tr>
+                    <tr><td></td><td> <input type="submit" value="Login" style="width: 126px" /></td></tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
